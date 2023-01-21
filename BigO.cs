@@ -35,4 +35,23 @@ public class BigO
         Console.WriteLine(boxes[0]); // O(1)
         Console.WriteLine(boxes[1]); // O(1)
     }
+
+    public static int FunChallenge(int[] input) {
+        var a = 10; // O(1) - it's executed once in the function
+        a = 50 + 3; // O(1) - it's executed once in the function
+        for (var i = 0; i < input.Length; i++) // O(n) - n is the input
+        {
+            AnotherFunction(); // O(n) - The call to the function is done for every iteration
+            var stranger = true; // O(n) - The assignment is done for every iteration
+            a++; // O(n) - The assignment is done for every iteration
+        }
+
+        return a; // O(1) - it's executed once in the function
+    }
+    // 3 steps + n + n + n + n
+    // BIG O(3 + 4n)
+
+    public static void AnotherFunction()
+    {
+    }
 }
